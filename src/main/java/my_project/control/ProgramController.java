@@ -36,9 +36,18 @@ public class ProgramController {
      */
     public void startProgram() {
         // Erstelle ein Objekt der Klasse Ball und lasse es zeichnen
-        Ball ball1 = new Ball(150,150);
-        viewController.draw(ball1);
-
+        Fence fence = new Fence(-7, 750);
+        viewController.draw(fence);
+        House house = new House(150,110);
+        viewController.draw(house);
+        Tree tree = new Tree(780, 500);
+        viewController.draw(tree);
+        Ball ball = new Ball(-180, 200);
+        viewController.draw(ball);
+        for (int i = 0; i <= 5; i++) {
+            Clouds clouds = new Clouds(i * 230, (Math.random()*100)+120);
+            viewController.draw(clouds);
+        }
     }
 
     /**
